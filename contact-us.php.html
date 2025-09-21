@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+
+<head>
+
+<!-- Site Title -->
+<title>Jadavpur University</title>
+
+<!-- Meta Data -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+
+<!-- Link to Style External Sheet -->
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+
+<script language="JavaScript" type="text/javascript">
+
+function valid()
+{
+text_name=(document.mform.text_name.value).replace(/^\s*|\s*$/g,'');
+text_email=(document.mform.text_email.value).replace(/^\s*|\s*$/g,'');
+text_phone=(document.mform.text_phone.value).replace(/^\s*|\s*$/g,'');
+
+if (text_name=="")
+{
+alert("Please Enter Your  Name.")
+document.mform.text_name.focus();
+return false;
+}
+
+if(text_email=="")
+	{
+		alert("Enter your email ID");
+		document.mform.text_email.focus();
+		return false;
+	}
+	var at=document.mform.text_email.value.indexOf("@");
+	//alert(at)
+	var dot=document.mform.text_email.value.indexOf(".");
+
+	if(at == -1 || dot == -1)
+	{
+		alert("Enter your valid email ID");
+		document.mform.text_email.focus();
+		return false;
+}
+
+if (text_phone=="")
+{
+alert("Please Enter Your Phone Number.")
+document.mform.text_phone.focus();
+return false;
+}
+
+if (document.mform.text_phone.value!="")
+{
+var ph_no=document.mform.text_phone.value;
+var result=checkPhoneNumber(ph_no);
+
+if(result==false)
+{
+    alert("Oops! Please enter a valid phone number.");
+    document.mform.text_phone.value="";
+    document.mform.text_phone.focus();
+    return false;
+}
+}
+
+document.mform.submit();
+}
+
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+		function checkPhoneNumber(phoneNumber)
+	 {
+	    //alert(phoneNumber)
+	    var phoneChars = "0123456789-()"
+	    var i = 0
+	    if (phoneNumber== "" )
+	    {
+		    return false;
+	    }
+
+	    for (i =0; i <= phoneNumber.length -1; i++)
+	    {
+
+		       if(phoneChars.indexOf(phoneNumber.charAt(i))==-1)
+               {
+                 return false;
+               }
+
+         }
+
+	    return true;
+}
+//]]>
+</script>
+
+</head>
+<body>
+
+<div id="topbg">
+ <div id="footerbg">
+  <div id="page_wrapper">
+
+<!-- Page Header Start -->
+  <div id="page_header">
+    <div id="follow">
+	 <img src="images/follow.png" alt="" border="0" /> <a href="https://www.facebook.com/groups/230592533718036/"><img src="images/icon1.png" alt="" border="0" /></a> <a href="#"><img src="images/icon2.png" alt="" border="0" /></a> <a href="#"><img src="images/icon3.png" alt="" border="0" /></a> <a href="#"><img src="images/icon4.png" alt="" border="0" /></a>
+	</div>
+  </div>
+
+  <div id="menu_bar">
+    <div id="navcontainer">
+      <ul id="navlist">
+      <li><a href="index.html" style="border:0px;">Home</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+      <li><a href="executive-committe.html">Executive Committee</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="newsletters.html">Newsletters</a></li>
+	  <li><a href="upcoming events.html">upcoming events</a></li>
+	  <li><a href="contact-us.php" style="color: #ECDF27;" class="current">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="header_banner">
+  </div>
+
+<!-- Page Header End -->
+
+  <div id="content_wrapper">
+
+<!-- Page Right Side Start -->
+    <div id="right_side">
+
+			<!-- For uploading Flyers - enable this part. -->
+      <!-- <div class="rightbox">
+         <h3>Upcoming Events</h3>
+         <div class="rcontent">
+  	     <ul class="linklist">
+         <li>JU Alumni Sydney Chapter in partnership with Mukti,Australia presents an evening of music & dance in Strathfield at 6:30pm on 14th July,2018. Please check the flyer below for more details.</li>
+             <li>
+               <a href="docs/Flyer-Music_Dance.jpg">
+               <embed src="docs/Flyer-Music_Dance.jpg" type='image/jpg' width="75" height="55">
+                 <p><b>Flyer-July,2018</b></p></a>
+               </embed>
+             </li>
+  	     </ul>
+  	     <div class="morebtn"><a href="#"><img src="images/more.jpg" alt="" width="71" height="29" border="0" /></a></div>
+         </div>
+  	  </div> -->
+	  
+	  <div class="rightbox">
+       <h3>Upcoming Events</h3>
+       <div class="rcontent">
+	     <ul class="linklist">
+	       <li>JU Alumni Picnic on Sunday, 3rd August 2025 </li>
+	     </ul>
+	     <div class="morebtn"><a href="upcoming events.html"><img src="images/more.jpg" alt="" width="71" height="29" border="0" /></a></div>
+       </div>
+	  </div>
+
+  	<!-- <div class="rightbox">
+         <h3>Latest News</h3>
+         <div class="rcontent">
+  	     <p><strong>JU Alumni Sydney Chapter</strong></p>
+         <p>We will be announcing the next JU alumni meetup soon.</p>
+         <div class="morebtn"><a href="#"><img src="images/more.jpg" alt="" width="71" height="29" border="0" /></a></div>
+         </div>
+  	  </div> -->
+
+	  <div class="rightbox">
+       <h3>Membership</h3>
+       <div class="rcontent">
+	     <ul class="linklist">
+	       <li>Our membership is growing fast......</li>
+	     </ul>
+	     <div class="morebtn"><a href="#"><img src="images/more.jpg" alt="" width="71" height="29" border="0" /></a></div>
+       </div>
+	  </div>
+
+	  <div class="rightbox">
+       <h3>External Links</h3>
+       <div class="rcontent">
+	     <ul class="linklist">
+				 <li><a href="http://www.jaduniv.edu.in/">Jadavpur University</a></li>
+				 <li><a href="http://www.hqalumniju.org.in/">Hqrs at Kolkata</a></li>
+				 <li><a href="http://jualumnimelbourne.org/">Melbourne chapter</a></li>
+				 <li><a href="http://www.jualumniuk.org/home.html">UK Branch</a></li>
+				 <li><a href="http://www.juaam.in/">Mumbai Branch</a></li>
+				 <li><a href="http://jualumnidelhi.org/">Delhi branch</a></li>
+				 <li><a href="http://www.jualumnihyd.in/">Hyderabad Branch</a></li>
+				 <li><a href="http://www.jualumnibangalore.com/">Bangalore Branch</a></li>
+				 <li><a href="http://www.jualumnisingapore.com/">Singapore Branch</a></li>
+				 <li><a href="http://www.ju-alumni-toronto.org/">Toronto Branch</a></li>
+				 <li><a href="http://www.jugraduates.org/">Washington Branch</a></li>
+				 <li><a href="http://www.juaasocal.org/">Southern California Branch</a></li>
+	     </ul>
+	     <div class="morebtn"><a href="#"><img src="images/more.jpg" alt="" width="71" height="29" border="0" /></a></div>
+       </div>
+	  </div>
+
+    </div>
+<!-- Page Right Side End -->
+
+<!-- Page Main Content Start -->
+    <div id="main_content">
+
+      <h1>Contact Us</h1>
+      <div class="greenbox1">
+	  <p style="padding-bottom:0px;"><strong>Mailing Address:</strong> <br/>
+        Mr Narendra Saha Choudhury<br/>
+        251A Storey Street<br>
+		Maroubra 2035 NSW<br> 
+        Mobile:  +61 419 214 193</p> 
+      </div>
+
+	  <div class="greenbox1">
+	  		<form name="mform" id="mform" method="post" action="contact.php" style="margin:0px;">
+			<table border="0" cellspacing="0" cellpadding="3">
+              <tr>
+                <td>Name*</td>
+                <td><input type="text" name="text_name" class="input_box"></td>
+              </tr>
+              <tr>
+                <td>Email*</td>
+                <td><input type="text" name="text_email" class="input_box"></td>
+              </tr>
+			  <tr>
+                   <td>Phone*</td>
+                   <td><input type="text" name="text_phone" class="input_box" /></td>
+                </tr>
+              <tr>
+                <td>Message</td>
+                <td><textarea name="text_comment" class="input_box1"></textarea></td>
+              </tr>
+			  <tr>
+			  <td>Enter Captcha</td>
+				  <td>
+					<script type="text/javascript" src="http://www.google.com/recaptcha/api/challenge?k=6Le1zB8TAAAAAKp6WxjDOhGMZ8ZIAeaDtiBP_-SI"></script>
+
+	<noscript>
+  		<iframe src="http://www.google.com/recaptcha/api/noscript?k=6Le1zB8TAAAAAKp6WxjDOhGMZ8ZIAeaDtiBP_-SI" height="300" width="500" frameborder="0"></iframe><br/>
+  		<textarea name="recaptcha_challenge_field" rows="3" cols="40"></textarea>
+  		<input type="hidden" name="recaptcha_response_field" value="manual_challenge"/>
+	</noscript>				  </td>
+			  </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td><input type="image" src="images/submit.gif" name="Submit2" value="Submit" alt="Submit" onClick="javascript:return valid();" /></td>
+              </tr>
+            </table>
+		  </form>
+	  </div>
+
+    </div>
+<!-- Page Main Content End -->
+  </div>
+
+<!-- Page Footer Start -->
+  <div id="page_footer">
+    <p><a href="index.html">Home</a> | <a href="about-us.html">About Us</a> | <a href="executive-committe.html">Executive Committee</a>    |   <a href="events.html">Events</a> | <a href="newsletters.html">Newsletters</a> | <a href="upcoming events.html">Upcoming Events</a> | <a href="contact-us.php">Contact Us</a><br/>
+      Copyright &copy; 20014, Jadavpur University Alumni Sydney. All Right Reserved. Website by <a href="http://www.idatabits.com.au/" target="_blank" style="margin:0px;">i-Databits</a></p>
+  </div>
+<!-- Page Footer End -->
+
+  </div>
+ </div>
+</div>
+
+</body>
+</html>
